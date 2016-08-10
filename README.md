@@ -26,20 +26,18 @@ Browser Administration Console access:
 	Password: p4asSwd
 
 
-Configuration/Subsystem/Datasources/Non-XA
+Configuration/Subsystems/Connector/Datasources/DATASOURCES
 ```
 	Add
-	  Custom
-	    Next >>
-	      Name*: MySQLDS
-	             MariadbDS
-	             PostgresDS
-	             OracleDS
+	  Name*: MySQLDS
+	         MariadbDS
+	         PostgresDS
+	         OracleDS
 
-        JNDI Name*: java:/MySQL-JNDI
-                    java:/Mariadb-JNDI
-                    java:/Postgres-JNDI
-                    java:/Oracle-JNDI
+	  JNDI Name*: java:/MySQL-JNDI
+                      java:/Mariadb-JNDI
+                      java:/Postgres-JNDI
+                      java:/Oracle-JNDI
 
 	Next >>
 	   Detected Driver
@@ -57,8 +55,7 @@ Configuration/Subsystem/Datasources/Non-XA
 	      Username: root
 	      Password: pass
 
-	      Next >>
-		Test Connection
+	      Test Connection
 
-	      Finish
+	      Done
 ```
