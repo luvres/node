@@ -35,9 +35,9 @@ Configuration/Subsystems/Connector/Datasources/DATASOURCES
 	         OracleDS
 
 	  JNDI Name*: java:/MySQL-JNDI
-                      java:/Mariadb-JNDI
-                      java:/Postgres-JNDI
-                      java:/Oracle-JNDI
+	              java:/Mariadb-JNDI
+	              java:/Postgres-JNDI
+	              java:/Oracle-JNDI
 
 	Next >>
 	   Detected Driver
