@@ -15,7 +15,9 @@ docker run --rm --name NodeJS -h nodejs \
 -v $HOME/node:/root \
 -p 3000:3000 \
 -ti node:6-alpine ash
+```
 
+```
 node app.js
 
 http://localhost:3000/
