@@ -5,6 +5,7 @@ cd $HOME/node
 mkdir project
 cd project
 ```
+
 ### Express
 ##### npm init
 ```
@@ -19,14 +20,7 @@ docker run -ti --rm -v $PWD:/root -w /root node:carbon-alpine npm install expres
 curl -O https://raw.githubusercontent.com/luvres/node/master/app.js
 curl -O https://raw.githubusercontent.com/luvres/node/master/index.html
 ```
-##### Run node
-```
-docker run -d --rm --name Node -h node \
--p 3000:3000 \
--w /root \
--v $PWD:/root \
-node:carbon-alpine node app.js
-```
+
 ### Nodemon
 ##### install
 ```
