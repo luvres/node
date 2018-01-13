@@ -27,6 +27,11 @@ docker run -d --rm --name Node -h node \
 -v $PWD:/root \
 node:carbon-alpine node app.js
 ```
+### Nodemon
+##### install
+```
+docker run -ti --rm -v $PWD:/root -w /root node:carbon-alpine npm install nodemon --save
+```
 ##### Run nodemon
 ```
 docker run -d --rm --name Node -h node \
