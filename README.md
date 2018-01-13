@@ -8,11 +8,16 @@ cd project
 ### Express
 ##### npm init
 ```
-docker run -ti --rm -v $PWD:/root node:carbon-alpine npm init
+docker run -ti --rm -v $PWD:/root -w /root node:carbon-alpine npm init
 ```
 ##### Install Express
 ```
-docker run -ti --rm -v $PWD:/root node:carbon-alpine npm install express --save
+docker run -ti --rm -v $PWD:/root -w /root node:carbon-alpine npm install express --save
+```
+##### Files
+```
+curl -O https://raw.githubusercontent.com/luvres/node/master/app.js
+curl -O https://raw.githubusercontent.com/luvres/node/master/index.html
 ```
 ##### Run node
 ```

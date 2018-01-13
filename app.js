@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var path = require('path');
+
 app.get('/', function(req,res){
-  res.send('Node@Done');
-}).listen(3000); 
+  res.sendFile(__dirname + '/index.html');
+}).listen(3000);
