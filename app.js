@@ -1,16 +1,6 @@
-var http = require("http");
-var fs = require("fs");
+var express = require('express');
+var app = express();
 
-http.createServer(function(request, response){
-  fs.readFile("index.html", function(erro, conteudo){
-    if(erro){
-      console.log(erro);
-    }
-    else{
-      response.write(conteudo);
-    }
-    response.end();
-  })
-}).listen(3000);
-
-console.log("Servidor rodando em http://localhost:3000");
+app.get('/', function(req,res){
+  res.send('Node@Done');
+}).listen(3000); 
