@@ -28,10 +28,10 @@ docker run -ti --rm -v $PWD:/root -w /root node:carbon-alpine npm install nodemo
 ```
 ##### Run nodemon
 ```
-docker run -d --rm --name Node -h node \
+docker run -d --name Node -h node \
 -p 3000:3000 \
 -w /root \
--v $PWD:/root \
+-v $HOME/node/project:/root \
 node:carbon-alpine \
 /root/node_modules/nodemon/bin/nodemon.js app.js
 ```
@@ -85,4 +85,27 @@ docker run -d --rm --name Http \
 ```
 http://localhost:8080/
 ```
+
+-----
+### Mongo
+##### Create directory
+```
+mkdir -p $HOME/mongo/data/db
+```
+##### Run mongod
+```
+docker run -d --name Mongo \
+-p 27017:27017 -p 28017:28017 \
+-e AUTH=no \
+-v $HOME/mongo/data/db:/data/db \
+-w /data/db \
+mongo
+```
+##### Exec Mongo
+```
+docker exec -ti Mongo mongo
+```
+
+
+
 
